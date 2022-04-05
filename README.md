@@ -40,6 +40,18 @@ Body Controller code:
 public class bodyController : MonoBehaviour
 {
 
+    Vector3 velocity;
+    Vector3 lastVelocity = Vector3.one;
+    Vector3 lastSpiderPosition;
+    Vector3[] legPositions;
+    Vector3[] legOriginalPositions;
+    List<int> nextIndexToMove = new List<int>();
+    List<int> IndexMoving = new List<int>();
+    Vector3 lastBodyUp;
+    List<int> oppositeLeg = new List<int>();
+    bool currentLeg = true;
+    float resetTimer = 0.5f;
+
     [Space(10)]
     [Header("GameObject Assignment")]
     [Space(10)]
@@ -67,20 +79,6 @@ public class bodyController : MonoBehaviour
     public float LegSmoothness = 8;
     public float BodySmoothness = 8;
     public float OverStepMultiplier = 4;
-
-    Vector3 velocity;
-    Vector3 lastVelocity = Vector3.one;
-    Vector3 lastSpiderPosition;
-    Vector3[] legPositions;
-    Vector3[] legOriginalPositions;
-    List<int> nextIndexToMove = new List<int>();
-    List<int> IndexMoving = new List<int>();
-    Vector3 lastBodyUp;
-    List<int> oppositeLeg = new List<int>();
-    bool currentLeg = true;
-    float resetTimer = 0.5f;
-
-
 
 
     void Start()
