@@ -35,8 +35,11 @@ code used will be below if you dont want to dig into the files!
 
 Body Controller code:
 ----------------------
+
+
 public class bodyController : MonoBehaviour
 {
+
     [Space(10)]
     [Header("GameObject Assignment")]
     [Space(10)]
@@ -190,6 +193,7 @@ Leg aim grounding code:
 
 public class LegAimGrounding : MonoBehaviour
 {
+
     GameObject raycastOrigin;
     int layerMask;
     void Start()
@@ -218,6 +222,7 @@ basic spider controller:
 -------------------------
 public class simpleController : MonoBehaviour
 {
+
     public Rigidbody cntroller;
     public Transform cam;
 
